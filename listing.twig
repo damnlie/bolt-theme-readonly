@@ -1,0 +1,25 @@
+{% include '_header.twig' %}
+			<!-- Main -->
+				<div id="main">
+				
+				
+					{% for record in records %}
+					<!-- One -->
+						<section id="one">
+							<div class="container">
+								<header class="major">
+									<h2>{{ record.title }}</h2>
+								</header>
+								<p>
+								{{ record.teaser }}
+								
+								<a href="{{ record.link }}">Read more...</a>
+								</p>
+							</div>
+						</section>
+					{% endfor %}	
+					
+				
+				</div>
+
+{% include '_footer.twig' %}
