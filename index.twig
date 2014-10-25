@@ -27,9 +27,7 @@
                     {{ home.teaser }}
                 {% endif %}	
 			
-{% if home.link is defined and home.link is not empty %}
-                    <a href="{{ home.link }}">Read more &raquo;</a>
-                {% endif %}
+
 
             {% else %}
                 <p>
@@ -46,35 +44,26 @@
 					<!-- Three -->
 						<section id="three">
 							<div class="container">
-								<h3>A Few Accomplishments</h3>
-								<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
+								<h3>{{ __('Latest entries') }}</h3>
+								
 								<div class="features">
+								{% setcontent records = "entries/latest/6" allowpaging %}
+								{% for record in records %}
 									<article>
-										<a href="#" class="image"><img src="{{ paths.theme }}images/pic01.jpg" alt="" /></a>
+										<a href="{{ record.link }}" class="image"><img src="{{ thumbnail(record.image, 332, 192) }}" alt="" /></a>
 										<div class="inner">
-											<h4>Possibly broke spacetime</h4>
-											<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+											<a href="{{ record.link }}"><h4>{{ record.title }}</h4></a>
+											{{ record.teaser }}
+											
 										</div>
 									</article>
-									<article>
-										<a href="#" class="image"><img src="{{ paths.theme }}images/pic02.jpg" alt="" /></a>
-										<div class="inner">
-											<h4>Terraformed a small moon</h4>
-											<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-										</div>
-									</article>
-									<article>
-										<a href="#" class="image"><img src="{{ paths.theme }}images/pic03.jpg" alt="" /></a>
-										<div class="inner">
-											<h4>Snapped dark matter in the wild</h4>
-											<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-										</div>
-									</article>
+								{% endfor %}	
 								</div>
 							</div>
 						</section>
 						
 					<!-- Four -->
+					<!--
 						<section id="four">
 							<div class="container">
 								<h3>Contact Me</h3>
@@ -101,7 +90,7 @@
 								</form>
 							</div>
 						</section>
-				
+				`	-->
 					<!-- Five -->
 					<!--
 						<section id="five">
