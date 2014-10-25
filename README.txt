@@ -1,4 +1,16 @@
+Readonly theme for bolt
+=======================
+
+This is an adaptation of the readonly theme by html5up.net
+
+You can add links to your various account by editing the config.yml in the theme directory.
+
+Below is the original readme file from html5up.net:
+
+
 Read Only by HTML5 UP
+=====================
+
 html5up.net | @n33co
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
