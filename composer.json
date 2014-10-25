@@ -2,7 +2,7 @@
   "name": "damnlie/readonly",
     "description": "",
     "type": "bolt-theme",
-    "keywords": ["theme"],
+    "keywords": ["theme", "html5UP", "skell", "sass"],
     "require": {
         "bolt/bolt": ">=2.0.0,<3.0.0"
     },
