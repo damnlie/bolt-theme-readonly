@@ -44,11 +44,11 @@
 					</nav>
 					<footer>
 						<ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+							{% if theme.twitter %}<li><a href="http://twitter.com/{{ theme.twitter }}" class="icon fa-twitter"><span class="label">Twitter</span></a></li>{% endif %}
+							{% if theme.facebook %}<li><a href="http://facebook.com/{{ theme.facebook }}" class="icon fa-facebook"><span class="label">Facebook</span></a></li>{% endif %}
+							{% if theme.instagram %}<li><a href="http://instagram.com/{{ theme.instagram }}" class="icon fa-instagram"><span class="label">Instagram</span></a></li>{% endif %}
+							{% if theme.github %}<li><a href="http://github.com/{{ theme.github }}" class="icon fa-github"><span class="label">Github</span></a></li>{% endif %}
+							{% if theme.email %}<li><a href="mailto:{{ theme.email }}" class="icon fa-envelope"><span class="label">Email</span></a></li>{% endif %}
 						</ul>
 					</footer>
 				</section>

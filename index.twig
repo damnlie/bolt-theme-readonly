@@ -47,7 +47,7 @@
 								<h3>{{ __('Latest entries') }}</h3>
 								
 								<div class="features">
-								{% setcontent records = "entries/latest/6" allowpaging %}
+								{% setcontent records = "entries/latest/3" allowpaging %}
 								{% for record in records %}
 									<article>
 										<a href="{{ record.link }}" class="image"><img src="{{ thumbnail(record.image, 332, 192) }}" alt="" /></a>
