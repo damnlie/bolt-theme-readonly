@@ -1,0 +1,20 @@
+{
+  "name": "damnlie/readonly",
+    "description": "",
+    "type": "bolt-theme",
+    "keywords": ["theme"],
+    "require": {
+        "bolt/bolt": ">=2.0.0,<3.0.0"
+    },
+    "license": "CC BY 3.0",
+    "authors": [
+        {
+            "name": "MelindaK",
+            "email": "bolt@damnlie.net"
+        },
+        {
+            "name": "realitygaps",
+            "email": "bolt@gapsinreality.com"
+        }
+    ]
+}
