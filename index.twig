@@ -5,30 +5,43 @@
 					<!-- One -->
 						<section id="one">
 							<div class="container">
-								<header class="major">
-									<h2>Read Only</h2>
-									<p>Just an incredibly simple responsive site<br />
-									template freebie by <a href="http://html5up.net">HTML5 UP</a>.</p>
+							    <header class="major">
+							    
+							    					   {% if record is defined %}
+
+                {# make the 'home' variable refer to the current record, which is set by the
+                   user in config.yml #}
+                {% set home = record %}
+                {% if home.title is defined and home.title is not empty %}
+                    <h2>{{ home.title }}</h2>
+                {% endif %}
+
+		
+		{% if home.subtitle is defined and home.subtitle is not empty %}
+                    <p>{{ home.subtitle }}</p>
+                {% endif %}
+		
 								</header>
-								<p>Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante lorem ipsum sed accumsan erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet tortor ultricies non ante erat nunc integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum.</p>
-							</div>
+			
+		{% if home.teaser is defined and home.teaser is not empty %}
+                    {{ home.teaser }}
+                {% endif %}	
+			
+{% if home.link is defined and home.link is not empty %}
+                    <a href="{{ home.link }}">Read more &raquo;</a>
+                {% endif %}
+
+            {% else %}
+                <p>
+                    {{ __('Content for home not found!') }} 
+                    {{ __("You should set 'homepage:' in your 'app/config/config.yml' to an existing record. Make sure that the content is published, otherwise it will not be shown.") }}
+                </p>
+            {% endif %}							
+							
+						</div>
 						</section>
 						
-					<!-- Two -->
-						<section id="two">
-							<div class="container">
-								<h3>Things I Can Do</h3>
-								<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer lorem ipsum dolor sit amet.</p>
-								<ul class="feature-icons">
-									<li class="fa-code">Write all the code</li>
-									<li class="fa-cubes">Stack small boxes</li>
-									<li class="fa-book">Read books and stuff</li>
-									<li class="fa-coffee">Drink much coffee</li>
-									<li class="fa-bolt">Lightning bolt</li>
-									<li class="fa-users">Shadow clone technique</li>
-								</ul>
-							</div>
-						</section>
+					
 						
 					<!-- Three -->
 						<section id="three">
