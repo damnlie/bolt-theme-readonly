@@ -3,6 +3,8 @@ Readonly theme for bolt
 
 This is an adaptation of the readonly theme by html5up.net
 
+Note: This is for Bolt 3. Check out the `bolt-v2` branch for a Bolt 2 compatible version.
+
 You can add links to your various account by editing the config.yml in the theme directory.
 
 Below is the original readme file from html5up.net:
